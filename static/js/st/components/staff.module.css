@@ -1,0 +1,427 @@
+.staff_wrapper {
+    background: white;
+    margin: 0 0 20px 0;
+    padding: 185px 0 10px 40px;
+    overflow-x: clip;
+    overflow-y: visible;
+    position: relative;
+
+    @media (max-width: 1100px) {
+        border-radius: 0;
+        border-left: 0;
+        border-right: 0;
+        padding-left: 20px;
+    }
+}
+
+.grand_staff {
+    .staff {
+        &:first-child {
+            margin-bottom: 70px;
+        }
+    }
+}
+
+.staff {
+    position: relative;
+    height: calc(var(--line-spacing) * 4);
+    border-left: 6px solid black;
+    margin: calc(var(--line-spacing) * 2) 0 calc(var(--line-spacing) * 2) 0;
+
+    .cleff {
+        z-index: 1;
+        user-select: none;
+        -webkit-user-drag: none;
+    }
+
+    &.g_staff {
+        .cleff {
+            position: absolute;
+            left: 14px;
+            height: 165%;
+            top: -28%;
+        }
+    }
+
+    &.f_staff {
+        .cleff {
+            position: absolute;
+            left: 8px;
+            height: 82%;
+        }
+    }
+
+    .ledger_line {
+        position: absolute;
+        height: 2px;
+        background: #666;
+
+        &.above {
+        }
+
+        &.below {
+        }
+    }
+
+    .lines {
+        .line {
+            height: 2px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #666;
+        }
+
+        .line1 {
+        }
+
+        .line2 {
+            top: 25%;
+        }
+
+        .line3 {
+            top: 50%;
+        }
+
+        .line4 {
+            top: 75%;
+        }
+
+        .line5 {
+            top: auto;
+            bottom: 0;
+        }
+    }
+
+    .key_signature {
+        position: absolute;
+        left: 100px;
+        top: 0;
+        bottom: 0;
+
+        .accidental {
+            position: absolute;
+            top: 0;
+
+            &.sharp {
+                height: 78%;
+                transform: translate(0, -50%);
+            }
+
+            &.flat {
+                height: 50%;
+                transform: translate(-44%, -71%);
+            }
+        }
+    }
+
+    .staff_song_notes {
+        .measure_line {
+            width: 2px;
+            position: absolute;
+            background: #666;
+            top: 0;
+            bottom: 0;
+            &[data-label] {
+                &::before {
+                    position: absolute;
+                    content: attr(data-label);
+                    font-size: 12px;
+                    font-weight: bold;
+                    bottom: 100%;
+                    padding-bottom: 4px;
+                    color: #888;
+                }
+            }
+        }
+
+
+        .note_bar {
+            position: absolute;
+            top: 0;
+            left: 120px;
+            height: 20%;
+            transform: translate(0, -47%);
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 4px;
+                right: 0;
+                bottom: 4px;
+                left: 0;
+
+                background: #69a25d;
+                box-shadow: 0 0 0 2px #2f3a35;
+                border-radius: 12px;
+
+            }
+
+            &.is_sharp {
+                &::before {
+                    background: #a25d5d;
+                    border-radius: 12px 12px 0 0;
+                }
+            }
+
+            &.is_flat {
+                &::before {
+                    background: #5d92a2;
+                    border-radius: 0 0 12px 12px;
+                }
+            }
+
+            &.is_natural {
+                &::before {
+                    background: #915da2;
+                    border-radius: 0;
+                }
+            }
+
+            &.held {
+                &::before {
+                    background: #94e085;
+                    box-shadow: 0 0 0 2px color-mix(in oklab, #2f3a35, white 10%);
+                }
+            }
+
+            &.outside_loop {
+                &::before {
+                    background: #bbb;
+                    box-shadow: none;
+                }
+            }
+
+            /* ativado quando a coloração por nota está ligada -- vem depois
+               das regras de acidente para ganhar prioridade sobre elas */
+            &.pitch_colored {
+                &::before {
+                    background: var(--note-color, #69a25d);
+                }
+            }
+
+            &.clickable_note {
+                cursor: pointer;
+            }
+
+            .note_label {
+                position: absolute;
+                left: 4px;
+                top: 50%;
+                transform: translate(0, -50%);
+                z-index: 1;
+                font-size: 14px;
+                font-weight: bold;
+                line-height: 1;
+                color: #fff;
+                text-shadow:
+                    -1px -1px 0 rgba(0,0,0,0.65),
+                     1px -1px 0 rgba(0,0,0,0.65),
+                    -1px  1px 0 rgba(0,0,0,0.65),
+                     1px  1px 0 rgba(0,0,0,0.65);
+                pointer-events: none;
+                white-space: nowrap;
+            }
+
+            .fingering_label {
+                position: absolute;
+                left: 4px;
+                top: -20px;
+                transform: none;
+                z-index: 2;
+                font-size: 12px;
+                font-weight: bold;
+                line-height: 1;
+                color: #333;
+                background: #fff;
+                border: 1px solid #999;
+                border-radius: 50%;
+                width: 16px;
+                height: 16px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                pointer-events: none;
+            }
+        }
+
+    }
+
+    .chord_symbols_row {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 1px;
+        margin: 0;
+        z-index: 20;
+        pointer-events: none;
+    }
+
+    .chord_symbol {
+        position: absolute;
+        top: -120px; /* altura fixa: alinhada ao terceiro espaço suplementar superior (Ré) */
+        font-size: 32px;
+        line-height: 1;
+        font-weight: 900;
+        color: #000;
+        white-space: nowrap;
+        pointer-events: none;
+        text-shadow: none;
+    }
+
+    .staff_notes {
+        position: absolute;
+        top: 0;
+        left: 120px;
+        right: 0;
+        bottom: 0;
+
+        .annotation {
+            background: gray;
+            color: white;
+            position: absolute;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            opacity: 0.5;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        .accidental {
+            height: 100%;
+            position: absolute;
+            right: 110%;
+
+            &.sharp {
+                height: 300%;
+                top: -100%;
+            }
+
+            &.flat {
+                height: 200%;
+                top: -91%;
+            }
+
+            &.natural {
+                height: 300%;
+                top: -100%;
+                right: 115%;
+            }
+        }
+
+        .note {
+            position: absolute;
+            top: 0;
+            left: 120px;
+            height: 20%;
+            transform: translate(0, -47%);
+            transition: 0.1s ease transform;
+
+            &.whole_note {
+            }
+
+            .primary {
+                height: 100%;
+            }
+
+            &.group_offset {
+                margin-left: 30px;
+            }
+
+            &.held {
+                opacity: 0.2;
+                transform: scale3d(1.1, 1.1, 1) translate(0, -47%);
+            }
+
+            &.outside {
+            }
+        }
+    }
+
+    .time_bar {
+        position: absolute;
+        top: -120px; /* sobe até a mesma altura da cifra no 3º espaço suplementar */
+        bottom: 0;
+        width: 2px;
+        background: red;
+        left: 220px;
+        z-index: 30;
+        pointer-events: none;
+    }
+
+}
+
+
+.chord_staff {
+    padding: 40px 20px;
+
+    .chord_scrolling {
+        white-space: nowrap;
+    }
+
+    .chord {
+        font-size: 30px;
+        font-weight: bold;
+        width: 160px;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    .touched {
+        margin-left: 5px;
+        font-weight: normal;
+        display: flex;
+        height: 35px;
+        align-items: center;
+
+        .right {
+            color: var(--green);
+        }
+
+        .wrong {
+            color: var(--red);
+        }
+
+    }
+}
+
+@keyframes noteshake {
+    from, 100% {
+        transform: translate(0, -47%);
+    }
+
+    10%, 30%, 50%, 70%, 90% {
+        transform: translate(-7%, -47%);
+    }
+
+    20%, 40%, 60%, 80% {
+        transform: translate(7%, -47%);
+    }
+}
+
+.noteshake {
+    animation-name: noteshake;
+    animation-duration: 0.5s;
+}
+
+@keyframes errorshake {
+    from, 100% {
+        transform: translate(0, 0);
+    }
+
+    10%, 30%, 50%, 70%, 90% {
+        transform: translate(-5%, 0);
+    }
+
+    20%, 40%, 60%, 80% {
+        transform: translate(5%, 0);
+    }
+}
+
+.errorshake {
+    animation-name: errorshake;
+    animation-duration: 0.5s;
+}

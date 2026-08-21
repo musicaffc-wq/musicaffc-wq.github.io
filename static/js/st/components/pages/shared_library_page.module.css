@@ -1,0 +1,115 @@
+.shared_library_page {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+
+    .explanation {
+        color: #666;
+        font-size: 14px;
+    }
+
+    .error_message {
+        background: #fbe4e1;
+        border: 1px solid #e6bdb2;
+        color: #a3402f;
+        padding: 10px;
+        border-radius: 3px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+
+        button {
+            width: auto;
+        }
+    }
+
+    .stale_notice {
+        background: #fff6e0;
+        border: 1px solid #f0dca0;
+        color: #886400;
+        padding: 8px 10px;
+        border-radius: 3px;
+        margin-bottom: 10px;
+        font-size: 13px;
+    }
+
+    .search_box {
+        margin: 12px 0 15px;
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-size: 13px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        input {
+            box-sizing: border-box;
+            width: 100%;
+            padding: 9px 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+            background: #fff;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #727290;
+        }
+    }
+
+    .song_list {
+        list-style: none;
+        margin: 15px 0 0;
+        padding: 0;
+        border: 1px solid #ddd;
+        border-radius: 3px;
+    }
+
+    .song_item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 14px;
+        border-bottom: 1px solid #eee;
+        cursor: pointer;
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &:hover {
+            background: #f5f5f5;
+        }
+    }
+
+    .song_title {
+        .song_number {
+            color: #999;
+            font-variant-numeric: tabular-nums;
+        }
+    }
+
+    .song_action {
+        color: #727290;
+        font-size: 13px;
+        font-weight: bold;
+    }
+
+    .manage_button {
+        width: auto;
+        margin: 10px 0;
+    }
+
+    .delete_button {
+        width: auto;
+        font-size: 12px;
+        background: #b4392f;
+        color: #fff;
+        border: none;
+    }
+}

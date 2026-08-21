@@ -1,0 +1,27 @@
+{
+  "short_name": "Sight Reading",
+  "name": "Sight Reading Trainer",
+  "theme_color": "#727290",
+  "background_color": "#727290",
+  "icons": [
+    {
+      "src": "/static/img/icon-144.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "/static/img/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/static/img/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "display": "standalone"
+}

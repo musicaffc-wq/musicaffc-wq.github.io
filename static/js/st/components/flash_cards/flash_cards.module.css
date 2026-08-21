@@ -1,0 +1,187 @@
+.flash_card_page {
+    .flash_card_header {
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid color-mix(in srgb, var(--border-color), transparent 50%);
+        padding: 8px 20px;
+        background: rgba(255, 255, 255, 0.3);
+
+        > .exercise_label {
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            font-weight: bold;
+        }
+    }
+
+    .card_holder {
+        text-align: center;
+        margin: 40px 0;
+
+        @media (max-width: 1100px) {
+            margin-top: 0;
+        }
+    }
+
+    .no_cards_error {
+        text-align: center;
+        padding: 40px;
+        display: block;
+    }
+
+    .transition_group {
+        position: relative;
+
+        > .card_row {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+
+            &:first-child {
+                position: static;
+            }
+        }
+    }
+
+    .flash_card {
+        background: white;
+        font-size: 80px;
+        display: inline-block;
+        padding: 80px 40px;
+        font-weight: bold;
+        position: relative;
+
+        @media (max-width: 1100px) {
+            font-size: 60px;
+            display: block;
+        }
+    }
+
+    .card_row {
+        --card-transition-speed: 0.4s;
+
+        &:global(.show_card-enter) {
+            .flash_card {
+                opacity: 0.5;
+                transition: opacity var(--card-transition-speed) ease, transform var(--card-transition-speed) ease-out;
+                transform: scale(0.8, 0.8);
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    background: black;
+                    opacity: 0.5;
+                    transition: opacity var(--card-transition-speed) ease;
+                }
+            }
+
+            &:global(.show_card-enter-active) {
+                .flash_card {
+                    transform: scale(1, 1);
+                    opacity: 1;
+
+                    &::before {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+
+        &:global(.show_card-exit) {
+            .flash_card {
+                transform: rotate(0);
+                transition: all var(--card-transition-speed) ease-out;
+                opacity: 1;
+            }
+
+            &:global(.show_card-exit-active) {
+                .flash_card {
+                    transform: translate(-100px, 50px) rotate(-40deg);
+                    opacity: 0;
+                }
+            }
+        }
+    }
+
+    .start_message {
+        background: white;
+        padding: 20px;
+        margin: 40px auto;
+        text-align: center;
+        max-width: 400px;
+    }
+
+    .card_options {
+        margin-top: 40px;
+        text-align: center;
+
+        > button {
+            margin-left: 15px;
+            font-size: 18px;
+            padding: 10px 20px;
+
+            &:first-child {
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 1100px) {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: 0;
+            padding: 10px;
+            background: color-mix(in srgb, var(--body-background), transparent 20%);
+
+            > button {
+                margin: 5px;
+            }
+        }
+    }
+
+    .exercise_selector {
+        display: block;
+    }
+
+    .test_group {
+        font-size: 16px;
+        font-weight: bold;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        padding: 2px 8px;
+        border-radius: 3px;
+        color: #666;
+        white-space: nowrap;
+
+        &.selected {
+            background: rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(0, 0, 0, 0.2);
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        input {
+            margin-right: 8px;
+        }
+    }
+}
+
+.chord_identification_exercise {
+    .flash_card {
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+        :global(.staff)  {
+            min-width: 300px;
+            font-size: 12px;
+        }
+    }
+}

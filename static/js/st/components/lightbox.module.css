@@ -1,0 +1,77 @@
+.lightbox {
+    background: transparent;
+    border: none;
+    padding: 30px;
+    margin: auto;
+    max-width: calc(100vw - 60px);
+    max-height: calc(100vh - 60px);
+
+    &::backdrop {
+        background: rgba(255, 255, 255, 0.8);
+        animation: backdrop-fade-in 0.2s ease;
+    }
+
+    &[open] {
+        animation: dialog-slide-in 0.2s ease-out;
+    }
+
+    .lightbox_content {
+        background: white;
+        border: 1px solid color-mix(in oklab, var(--border-color), white 10%);
+        border-radius: 6px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        width: 600px;
+        max-width: 100%;
+        padding: 20px;
+
+        h2 {
+            margin-top: 0;
+            color: #444;
+        }
+
+        p {
+            line-height: 1.5;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+    }
+
+    @media (max-width: 600px) {
+        padding: 0;
+        max-width: 100vw;
+        max-height: 100vh;
+
+        .lightbox_content {
+            box-sizing: border-box;
+            width: 100vw;
+            height: 100vh;
+            border-radius: 0;
+            border: 0;
+            overflow: auto;
+            box-shadow: none;
+        }
+    }
+}
+
+@keyframes backdrop-fade-in {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes dialog-slide-in {
+    from {
+        transform: translate(0, 10%);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}

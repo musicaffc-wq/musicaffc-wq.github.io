@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html translate="no">
+<head>
+  <meta charset="UTF-8">
+  <!-- Truque padrão pra sites de página única (SPA) funcionarem no GitHub
+       Pages com links diretos (ex: /new-song). O GitHub Pages não sabe
+       nada sobre as rotas internas do React Router -- quando alguém abre
+       um link direto, ele serve o 404.html (veja mais abaixo), que
+       redireciona de volta pra cá guardando o caminho original numa
+       query string. Este script, rodando antes de tudo o mais, decodifica
+       essa query string e restaura a URL certa ANTES do React assumir. -->
+  <script type="text/javascript">
+    (function (l) {
+      if (l.search[1] === "/") {
+        var decoded = l.search.slice(1).split("&").map(function (s) {
+          return s.replace(/~and~/g, "&");
+        }).join("?");
+        window.history.replaceState(
+          null, null,
+          l.pathname.slice(0, -1) + decoded + l.hash
+        );
+      }
+    }(window.location));
+  </script>
+  <title>Sight Reading Trainer</title>
+  <link rel="icon" sizes="144x144" href="/static/img/icon-144.png">
+  <link rel="apple-touch-icon" href="/static/img/icon-144.png">
+  <link rel="manifest" href="/static/manifest.json">
+  <link rel="stylesheet" href="/main.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google" content="notranslate">
+  <meta name="theme-color" content="#727290">
+  <meta id="csrf_token" name="csrf_token" content="static-build-placeholder">
+</head>
+<body>
+  <div id="page"></div>
+  <script>
+    window.ST_initial_session = {}
+  </script>
+  <script src="/main.js"></script>
+</body>
+</html>
