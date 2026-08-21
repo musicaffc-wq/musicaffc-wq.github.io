@@ -17,5 +17,16 @@
     a2*"G" g4 d'4 c4*"C" c4 r4 e8 e8
     g2*"C7" e4 c4 b4*"F" a4 r4 f'8 f8
     e2*"G" c4 d4 c4*"C" c4 r4 r2}
+
+\relative {
+
+
+r2 r c, r g' r r r c, r r r f r g r c, r
+
+c r g' r r r c, r r r f r g r c, r
+
+
+
+}
     
   
