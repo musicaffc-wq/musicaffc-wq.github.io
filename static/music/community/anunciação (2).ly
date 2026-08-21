@@ -1,7 +1,7 @@
 % Title: Anunciação
 % Artist: Alceu Valença
 
-\tempo 4 = 60
+\tempo 4 = 48
 
 \time 4/4
 \relative c''{
