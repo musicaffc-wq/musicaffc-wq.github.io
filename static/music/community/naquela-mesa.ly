@@ -1,7 +1,5 @@
-% Title: Naquela Mesa
-% Artist:  Nelson Gonçalves
-
-
+% Title: Naquela Mesa (Cavaquinho)
+% Artist: Nelson Gonçalves
 
 \relative c'' {
 
