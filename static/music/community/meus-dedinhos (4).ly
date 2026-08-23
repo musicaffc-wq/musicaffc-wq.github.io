@@ -2,9 +2,11 @@
 % Artist: Tradicional
 % Source: Domínio público
 
-\time 4/4 \relative c'' {   r1  c4 d4 e4 c4 c4 d4 e4 c4 e4 f4 g4 r8 f8 e4 f4  g2 g8 a8 g8 f8 e4 c4
+\time 4/4 \relative c'' {   r1  c4-1 d4-2 e4-3 c4-1 c4-1 d4-2 e4-3 c4-1 e4-3 f4-4 g4-5 r8 f8-4 e4-3 f4-4  g2-5 
 
- g'8 a8 g8 f8 e4 c4 d4 g,4  c2 d4 g,4 c2
+g8-4 a8-5 g8-4 f8-3 e4-2 c4-1
+
+ g'8-4 a8-5 g8-4 f8-3 e4-2 c4-1 d4-2 g,4-1  c2-1 d4-2 g,4-1 c2-2
 
 
 
