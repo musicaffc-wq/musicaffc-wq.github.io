@@ -3,9 +3,9 @@
 % Source: Domínio público
 
 \relative c''
-{ r1 g4 g d' d e e d2
-c4 c b b a a g2
-d'4 d c c b b a2
-d4 d c c b b a2
-g4 g d' d e e d2
-c4 c b b a a g2 }
+{ r1 g4-1 g d'-5 d e-5 e d2-5
+c4-4 c b-3 b a-2 a g2-1
+d'4-5 d c-4 c b-3 b a2-2
+d4-5 d c-4 c b-3 b a2-2
+g4-1 g d'-5 d e-5 e d2-5
+c4-4 c b-3 b a-2 a g2-1 }
