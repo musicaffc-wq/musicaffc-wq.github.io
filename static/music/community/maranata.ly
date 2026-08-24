@@ -3,12 +3,12 @@
 
 \relative c''' {
   \clef "treble" \numericTimeSignature \time 4/4 \key c \major 
-\tempo 4 = 55
+\tempo 4 = 46
 
+r1
 
-
-c2. ~ c8 b8 | 
-  a2. ~ a8 g8 | 
+c2.   b4 | 
+  a2.  g4 | 
   e2 g2 | 
   d1 | 
   r8 a8 a8 a8 b8 c8 c4 | 
