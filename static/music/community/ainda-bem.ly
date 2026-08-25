@@ -14,7 +14,7 @@ r1
   r2 r8 e8-1 a8-1 b8-2
   
   c2-3 r4 d8-4 e8-5 ~ |
-  e8 d4 c8 b4 a8 f8 ~ |
+  e8 d4-4 c8 b4 a8 f8 ~ |
   f2 r8 r8 d'8 e8 ~ |
   e8 d4 c8 b4 a8 g8 ~ |
   g2 r8 r8 b8 d8 ~ |
