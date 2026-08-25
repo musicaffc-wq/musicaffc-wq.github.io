@@ -56,7 +56,7 @@ PartPOneVoiceOne = \relative b' {
   r4 r8 \D c8 \D c8 [ \D c8 \D e8 \D d8 ] | % 15
   b1 | % 16
   \repeat volta 2 {
-    r4 r8 \D fis'8 \D g8 [ \D fis8 \D e8 \D fis8 ] | % 17
+    r4 r8 \D g'8 \D g8 [ \D fis8 \D e8 \D fis8 ] | % 17
     \D g8 [ \D fis8 ] \D e2. | % 18
     r4 r8 \D g8 \D g8 [ \D g8 \D a8 \D g8 ] | % 19
 
