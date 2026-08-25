@@ -13,40 +13,40 @@ r1
 
   r2 r8 e8-1 a8-1 b8-2
   
-  c2-3 r4 d8-4 e8-5 ~ |
+  c2-3*"Am" r4 d8-4 e8-5 ~ |
   e8 d4-4 c8 b4 a8 f8 ~ |
-  f2 r8 r8 d'8 e8 ~ |
+  f2*"Dm" r8 r8 d'8 e8 ~ |
   e8 d4 c8 b4 a8 g8 ~ |
-  g2 r8 r8 b8 d8 ~ |
+  g2*"G" r8 r8 b8 d8 ~ |
   d8 c4 b8 d4 b8 c8 ~ |
-  c2 r4 e,8 b'8 ~ |
-  b2 r8 e,8 a8 b8 |
-  c2. r8 e8 ~ |
+  c2*"Am" r4 e,8 b'8 ~ |
+  b2*"E7" r8 e,8 a8 b8 |
+  c2.*"Am" r8 e8 ~ |
 
   e8 d4 c8 ~ c8 b8 a4 |
-  f2 r4 d'8 e8 ~ |
+  f2*"Dm" r4 d'8 e8 ~ |
   e8 d4 c8 b4 a8 g8 ~ |
-  g2 r4 b8 d8 ~ |
+  g2*"G" r4 b8 d8 ~ |
   d8 c4 b8 d4 b8 c8 ~ |
-  c2 ~ c4 e,8 b'8 ~ |
-  b2. r4 |
-  a8 g8 ~ g8 f16 g16 a2 |
+  c2*"Am" ~ c4 e,8 b'8 ~ |
+  b2.*"E7" r4 |
+  a8*"Dm" g8 ~ g8 f16 g16 a2 |
   r4 f8 g8 a8 b8 c8 a8 |
-  b4. a8 gis2 ~ |
+  b4.*"E7" a8 gis2 ~ |
 
   gis4. r8 r2 |
-  a8 g8 ~ g8 f16 g16 a2 |
+  a8*"Dm" g8 ~ g8 f16 g16 a2 |
   r4 f8 g8 a8 b8 c8 a8 |
-  b4. e2 e8 |
+  b4.*"E7" e2 e8 |
   d4 c8 b8 ~ b8 a8 b4 |
-  c2 r4 d8 e8 ~ |
+  c2*"Am" r4 d8 e8 ~ |
   e8 d4 c8 b4 a8 f8 ~ |
-  f2 r4 d'8 e8 ~ |
+  f2*"Dm" r4 d'8 e8 ~ |
   e8 d4 c8 b4 a8 g8 ~ |
-  g2 r4 b8 d8 ~ |
+  g2*"G" r4 b8 d8 ~ |
 
   d8 c4 b8 d4 b8 c8 ~ |
-  c2 r4 e,8 b'8 ~ |
-  b2 r2 \bar "|."
+  c2*"Am" r4 e,8 b'8 ~ |
+  b2*"E7" r2 \bar "|."
 }
 
