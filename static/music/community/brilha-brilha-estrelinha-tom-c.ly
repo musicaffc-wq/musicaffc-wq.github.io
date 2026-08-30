@@ -2,7 +2,7 @@
 % Artist: Cancioneiro Infantil
 % Source: Domínio público
 
-\transpose g c
+\transpose g c'
 
 \relative c''
 { r1 g4-1*"Dó" g d'-5 d e-5*"Fá" e d2-5*"Dó"
