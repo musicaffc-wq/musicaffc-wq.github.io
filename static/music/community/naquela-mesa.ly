@@ -19,9 +19,9 @@ r2
   e16 a16 b16 c16 b16 a8 e16 ~
   e8. a16 b16 c16 b16 a16
   e16 a16 gis16 a16 bes16 a8 d16 ~
-  d16 d8. r16 d16 d16 d16
+  d16 ~ d8. r16 d16 d16 d16
   d16 c16 b16 d16 c16 b16 f'8 ~
-  f16 e16 a,16 b16 c16 d16 c8
+  f16 e16 a,16 b16 c16  d16 c8 ~
   c16 b16 gis16 a16 b16 c8 cis16 ~
   cis4 r16 d16 d16 d16
   d16 c16 b16 d16 c16 b16 f'8 ~
